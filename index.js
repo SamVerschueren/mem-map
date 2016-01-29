@@ -5,7 +5,7 @@ function MemMap() {
 }
 
 MemMap.prototype.has = function (key) {
-	return Boolean(this[key]);
+	return this[key] !== undefined;
 };
 
 MemMap.prototype.get = function (key) {

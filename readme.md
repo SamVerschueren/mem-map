@@ -2,9 +2,10 @@
 
 > Map to be used with [mem](https://github.com/sindresorhus/mem)
 
-Please note, this is not a ponyfill for [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map) although it will use the native `Map`
-implementation if available. It is meant to be used with [mem](https://github.com/sindresorhus/mem) in order to support Node 0.10. When used in Node 0.10, it only
-implements `get`, `set` and `has`.
+Please note that this is **not** a ponyfill for [Map](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map). Although it will use the
+native `Map` implementation if available. If `Map` is not available, a very lightweight `Map` is offerred which only implements `get`, `set` and `has`. This is just
+enough so it can be used with [mem](https://github.com/sindresorhus/mem) if you want to support older Node versions.
+
 
 ## Install
 
