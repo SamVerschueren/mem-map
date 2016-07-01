@@ -16,13 +16,3 @@ test(t => {
 	t.is(map.get('foo'), 'bar');
 	t.is(map.get('fox'), 'bax');
 });
-
-if (process.version.indexOf('v10') === 0) {
-	test(t => {
-		const map = new Map();
-		map.set('foo', 'bar').set('fox', 'bax');
-
-		t.is(map.foo, 'bar');
-		t.is(map.fox, 'fox');
-	});
-}
